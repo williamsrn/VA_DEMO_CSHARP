@@ -1,0 +1,76 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/** Added RNW **/
+
+.rowLinks{
+    min-width: 75px;
+    width: 75px;
+}
+.address{
+    min-width: 125px;
+}
+
+abbr.indent{
+    padding-left:12px;
+}
+
+a.orange{
+    color: orange;
+}
+
+a.black{
+    color: black;
+}
+span.contact{
+   color: rgba(66, 139, 202, 1);
+}
+
+a.red{
+    color: darkred;
+}
+td:last-child > a:first-child{
+    margin-left:10%;
+}
+a.inlineLink{
+    /* this cancels above margin-left on specific links inside table cell*/
+    margin-left: 0 !important;
+}
+.form-group > label{
+    /*margin-left: -10px;*/
+}
+
+#demoModal .modal-dialog{
+    width: 500px;
+}
+
+/*Added below to keep vertical scroll bar from appearing when modal open -- comepnsate for 15px margin-right bootstrap adds when modal is opened*/
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    margin-right: 0;
+}
+
+.modal {
+    overflow-y: auto;
+}

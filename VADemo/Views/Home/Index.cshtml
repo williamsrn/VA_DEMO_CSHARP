@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModal" aria-hidden="true" data-url='@Url.Action("getCreate", "People")'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Enter Demographic Info</h4>
+            </div>
+            @using (Html.BeginForm("Create", "People"))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-body form-horizontal">
+
+                </div>
+                <div class="modal-footer">
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div class="jumbotron">
+    <h1>Ralph N. Williams</h1>
+    <p class="lead">Welcome to my web demo!</p>
+    <p class="lead">
+        This is my submission for the IS Systems Development Services - Sr. position at the
+        <a href="http://dva.state.wi.us/Pages/home.aspx">WDVA</a>.
+    </p>
+    <p>
+        <!-- @Html.ActionLink("Learn more &raquo;", "About", "Home", new { area = "" }, new { @class = "btn btn-primary btn-lg" })
+        <a href="http://asp.net" class="btn btn-primary btn-lg"></a>-->
+        <a class="btn btn-primary btn-lg" href='@Url.Action("About", "Home")' title="Home">
+            Learn more &raquo;
+        </a>
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Input Via Modal!</h2>
+        <p>
+            The beauty behind the MVC architecture is that you can easily reuse code, and views are no exception.
+            Clicking the button below will allow you to add a person's demographic information via modal, rather than opening a seperate webpage.
+            This was achieved by breaking the default create view into a partial view.
+        </p>
+        <p><button id='showNewUser' type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#demoModal">Enter Info</button></p>
+    </div>
+    <div class="col-md-4">
+        <h2>View Records</h2>
+        <p>Click here to view previously entered demographic information presented in a table.</p>
+        <p><a class="btn btn-default" href="/People/Index">View Info</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Documentation</h2>
+        <p>View end user and technical documentation for this demo.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
