@@ -20,11 +20,6 @@ namespace VADemo.Controllers
            return View(db.People.ToList());            
         }
 
-        public ActionResult getCreate()
-        {
-            return PartialView("_createForm");
-        }
-
         // GET: People/Details/5
         public ActionResult Details(int? id)
         {
@@ -38,6 +33,11 @@ namespace VADemo.Controllers
                 return HttpNotFound();
             }
             return View(person);
+        }
+
+        public ActionResult getCreate()
+        {
+            return PartialView("_createForm");
         }
 
         // GET: People/Create

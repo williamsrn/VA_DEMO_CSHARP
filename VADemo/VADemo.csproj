@@ -142,6 +142,20 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\image001.png" />
+    <Content Include="Content\images\image002.png" />
+    <Content Include="Content\images\image003.png" />
+    <Content Include="Content\images\image004.png" />
+    <Content Include="Content\images\image005.png" />
+    <Content Include="Content\images\image006.png" />
+    <Content Include="Content\images\image007.png" />
+    <Content Include="Content\images\image008.png" />
+    <Content Include="Content\images\image009.png" />
+    <Content Include="Content\images\image010.png" />
+    <Content Include="Content\images\image011.png" />
+    <Content Include="Content\images\image012.png" />
+    <Content Include="Content\images\image013.png" />
+    <Content Include="Content\images\welcome.PNG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -181,6 +195,8 @@
     <Content Include="Views\People\Edit.cshtml" />
     <Content Include="Views\People\Index.cshtml" />
     <Content Include="Views\People\_createForm.cshtml" />
+    <Content Include="Views\Home\UserDocumentation.cshtml" />
+    <Content Include="Views\Home\TechnicalDocumentation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

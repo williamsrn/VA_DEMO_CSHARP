@@ -63,7 +63,7 @@ a.inlineLink{
 }
 
 #demoModal .modal-dialog{
-    width: 500px;
+    max-width: 500px;
 }
 
 /*Added below to keep vertical scroll bar from appearing when modal open -- comepnsate for 15px margin-right bootstrap adds when modal is opened*/
@@ -71,6 +71,14 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
     margin-right: 0;
 }
 
-.modal {
-    overflow-y: auto;
+img.docs{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px 0px 20px;
+    max-width: 100%;
+}
+
+img.docIcon{
+    padding-bottom: 5px;
 }

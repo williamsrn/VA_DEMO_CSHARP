@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "UserDocumentation";
+}
+
+<h2>End-User Documentation</h2>
+<div class="container">
+    <p>This demo is available on GitHub Please navigate to the url:</p>
+
+    <p><a href="https://github.com/williamsrn/VA_DEMO_CSHARP">https://github.com/williamsrn/VA_DEMO_CSHARP</a></p>
+
+    <p>
+        To retrieve the repository to your local machine, click the 'Download ZIP' button on the lower left hand side of the webpage.
+        After the download completes, extract the file to your desktop or another location on your computer.
+        Open the extracted folder where you will then see the Visual Studio solution file VA Test1.sln.
+        You will need a minimum of Visual Studio 2010 to run the file.
+        If you have GitHub Desktop or GIT on your local machine, you can also clone the repository and then access VA Test1.sln.
+        For further instructions on Git/GitHub and cloning a repository, please refer to the associated documentation for the respective product.
+    </p>
+
+    <p>
+        With the project open in Visual Studio, you can easily build and run the solution locally on your computer by selecting the 'Debug' menu at the top of the screen,
+        and then 'Start Without Debugging'.  Alternatively you can select ctrl+F5 as a shortcut to build and run the solution.
+        You should then see the project open in your web browser.
+    </p>
+
+    <p>
+        Once the project is running in your browser, you will be presented with a welcome page.
+        At the top of the page is a series of links to the various pages of the web site: Home, About, Contact, and Manage Demographics.
+    </p>
+
+    <p>The ‘Home’ link will return the user to the ‘Welcome’ page from anywhere in the site.</p>
+
+    <p>The ‘About’ link will direct the user to an ‘About’ page.  This page provides details about the web site and some of the underlying technology in use.</p>
+
+    <p>The ‘Contact’ link will present the user with easy access to my personal contact info.</p>
+
+    <p>
+        Finally, the ‘Manage Demographics’ link is where all the goodies are.  Clicking this link will present a page to manage demographic info for a series of individuals.
+        The user will be presented with a list of individuals that were previously entered.  If there are no previously stored records, a message will be displayed indicating
+        there are no records to display.
+    </p>
+
+    <img class="docs" src="~/Content/images/image002.png" />
+
+    <h4>Create</h4>
+
+    <p>To add a new record, click one of the links presented on the page. Please see image below.</p>
+    <img class="docs" src="~/Content/images/image003.png" />
+
+    <p>
+        Both links will update the current view and present a form to add a new record.  Complete the form and select the ‘Create’ button to add the record to the list.
+        Alternatively click the ‘Back to List’ link to return to the list without adding a record.
+    </p>
+    <img class="docs" src="~/Content/images/image004.png" />
+
+    <p>
+        Create additional records as desired.  When a record is created, the entered information will be presented in the list with a series of buttons for managing the record.
+        The buttons are for editing the record, displaying record details, and deleting the record, respectively.
+        Hover over an individual button to see the corresponding action.
+    </p>
+    <img class="docs" src="~/Content/images/image005.png" />
+
+    <p>
+        Clicking on any one of the buttons will present an updated view corresponding to the button clicked.  Each action and the corresponding view are explained in detail below.
+    </p>
+
+    <br /><br />
+    <h4>Edit <img class="docIcon" src="~/Content/images/image006.png" /></h4>
+
+    <p>
+        Clicking the ‘Edit’ button adjacent to a record will update the view with a prepopulated form displaying the details from the selected record.
+        Edit the record as desired and click the ‘Save’ button at the bottom of the form to save the updates.
+    </p>
+    <img class="docs" src="~/Content/images/image007.png" />
+
+    <p>
+        The updated record will then be displayed in the list, as depicted in the image below.
+    </p>
+    <img class="docs" src="~/Content/images/image008.png" />
+
+    <br /><br />
+    <h4>Details <img class="docIcon" src="~/Content/images/image009.png" /></h4>
+
+    <p>
+        Clicking the ‘Details’ button will present a view of the record details, without any editing capabilities.
+          Links are provided to Edit the record or return to the list view.
+    </p>
+    <img class="docs" src="~/Content/images/image010.png" />
+
+    <br /><br />
+    <h4>Delete <img class="docIcon" src="~/Content/images/image011.png" /></h4>
+
+    <p>
+        To delete a record, click the adjacent ‘Delete’ button.  A delete view will be presented, asking to confirm the delete action.
+          Click the ‘Delete’ button to proceed deleting the record, or select the ‘Back to List’ link to return to the list view leaving the record intact.  
+    </p>
+    <img class="docs" src="~/Content/images/image012.png" />
+
+    <p>
+        After deleting the record, the updated list will no longer contain the record, as shown in the image below.
+    </p>
+    <img class="docs" src="~/Content/images/image013.png" />
+</div>

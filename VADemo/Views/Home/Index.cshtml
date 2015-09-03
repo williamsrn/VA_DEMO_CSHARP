@@ -6,7 +6,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Enter Demographic Info</h4>
+                <h4 class="modal-title" id="demoModalLabel">Enter Demographic Info</h4>
             </div>
             @using (Html.BeginForm("Create", "People"))
             {
@@ -45,20 +45,19 @@
     <div class="col-md-4">
         <h2>Input Via Modal!</h2>
         <p>
-            The beauty behind the MVC architecture is that you can easily reuse code, and views are no exception.
-            Clicking the button below will allow you to add a person's demographic information via modal, rather than opening a seperate webpage.
-            This was achieved by breaking the default create view into a partial view.
+            The beauty behind the MVC architecture is that you can easily reuse code, and a view is no exception.
+            Click the button below to add demographic information via modal.
         </p>
-        <p><button id='showNewUser' type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#demoModal">Enter Info</button></p>
+        <p><button id='showNewUser' type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#demoModal">Enter Info</button></p>
     </div>
     <div class="col-md-4">
-        <h2>View Records</h2>
-        <p>Click here to view previously entered demographic information presented in a table.</p>
-        <p><a class="btn btn-default" href="/People/Index">View Info</a></p>
+        <h2>End User Documentation</h2>
+        <p>View user documentation for this demo.</p>
+        <p><a class="btn btn-info" href="UserDocumentation">View Info</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Documentation</h2>
-        <p>View end user and technical documentation for this demo.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Technical Documentation</h2>
+        <p>View technical details about this web application.</p>
+        <p><a class="btn btn-info" href="TechnicalDocumentation">Learn more &raquo;</a></p>
     </div>
 </div>

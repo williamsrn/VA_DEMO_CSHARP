@@ -29,5 +29,15 @@ namespace VADemo.Controllers
 
             return View();
         }
+
+        public ActionResult UserDocumentation()
+        {
+            return View();
+        }
+
+        public ActionResult TechnicalDocumentation()
+        {
+            return View();
+        }
     }
 }
