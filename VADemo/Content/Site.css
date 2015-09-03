@@ -82,3 +82,53 @@ img.docs{
 img.docIcon{
     padding-bottom: 5px;
 }
+
+table1{
+
+}
+
+#table2{
+    margin-left: 117px;
+}
+.docHeading{
+    color: Highlight;
+    padding-right: 30px;
+    text-align: right; 
+    vertical-align: top;    
+}
+
+.docHeading2{
+    font-weight: bold;
+}
+.docHeading3{
+    font-style: italic;
+    color: Highlight;
+    padding-left: 20px;
+}
+.docHeading4{
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    padding-left: 30px;
+}
+.docHeading5{
+    color:Highlight;
+    font-style: italic;
+}
+.paddedRow{
+    padding-top:10px;
+}
+
+.paddedRow2{
+    padding-top:50px;
+}
+.paddedRow3{
+    padding-top:5px;
+}
+
+.indentRow{
+    padding-left: 40px;
+}
+.indentRow2{
+    padding-left: 60px;
+}

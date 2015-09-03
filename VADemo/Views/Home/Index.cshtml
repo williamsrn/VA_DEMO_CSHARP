@@ -19,8 +19,7 @@
                     <div class="form-group">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <input type="submit" value="Create" class="btn btn-primary" />
-                    </div>
-                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                    </div>                    
                 </div>
             }
         </div>
@@ -33,12 +32,8 @@
         This is my submission for the IS Systems Development Services - Sr. position at the
         <a href="http://dva.state.wi.us/Pages/home.aspx">WDVA</a>.
     </p>
-    <p>
-        <!-- @Html.ActionLink("Learn more &raquo;", "About", "Home", new { area = "" }, new { @class = "btn btn-primary btn-lg" })
-        <a href="http://asp.net" class="btn btn-primary btn-lg"></a>-->
-        <a class="btn btn-primary btn-lg" href='@Url.Action("About", "Home")' title="Home">
-            Learn more &raquo;
-        </a>
+    <p>        
+        <a class="btn btn-primary btn-lg" href='@Url.Action("About", "Home")' title="Home">Learn more &raquo;</a>
     </p>
 </div>
 <div class="row">
@@ -53,11 +48,11 @@
     <div class="col-md-4">
         <h2>End User Documentation</h2>
         <p>View user documentation for this demo.</p>
-        <p><a class="btn btn-info" href="UserDocumentation">View Info</a></p>
+        <p><a class="btn btn-info" href="/Home/UserDocumentation">View Info</a></p>
     </div>
     <div class="col-md-4">
         <h2>Technical Documentation</h2>
         <p>View technical details about this web application.</p>
-        <p><a class="btn btn-info" href="TechnicalDocumentation">Learn more &raquo;</a></p>
+        <p><a class="btn btn-info" href="/Home/TechnicalDocumentation">Learn more &raquo;</a></p>
     </div>
 </div>

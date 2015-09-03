@@ -5,3 +5,334 @@
 
 <h2>Technical Documentation</h2>
 
+<div class="container">
+   
+    
+    <table id="table1" class="table-responsive">
+        <tr class="">
+            <td class="docHeading paddedRow">
+                Purpose:
+            </td>
+            <td class="paddedRow">
+                This web application provides user management and storage of personal demographic information for an unlimited number of individuals.
+                It was developed using C# ASP.NET.
+            </td>
+        </tr>
+        <tr class="">
+            <td class="docHeading paddedRow">
+                Data:
+            </td>
+            <td class="paddedRow">
+                Individual records are stored in a Microsoft SQL Server database, and a web-based user interface is used for CRUD record management.
+                Users can enter new records, view details of individual records, edit record information, and delete records from the database.
+                The database consists of a single table named ‘People’.  Each record in the People table relates to a single person’s demographic information.
+                The table consists of five columns. The ID field is used as the unique identifier (primary key) for the record.
+                The additional four fields, fName, lName, address, and email, correspond to a person’s First Name, Last Name, Address, and Email, respectively.
+                CRUD functionality for managing the individual records is presented to the user via an easy-to-use table based format.
+            </td>
+        </tr>
+        <tr class="">
+            <td class="docHeading paddedRow">
+                Maintenance:
+            </td>
+            <td class="paddedRow">
+                This is a web-based application and was designed using the MVC architecture and the Entity Framework.
+                The backend utilizes a MS SQL Server database and the web-based frontend utilizes the Bootstrap framework for responsive web design,
+                with customized javascript and css for an enhanced user experience (UX).
+            </td>
+        </tr>
+    </table> 
+    <table id="table2" class="table-responsive">
+        <tr class="">
+            <td class="paddedRow2 docHeading2">
+                Models:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                There are two classes that comprise the Model for this application. VA_DBContext.cs and Person.cs.  They are located in the Models folder.
+            </td>
+        </tr>
+        <tr>
+            <td class="docHeading3 paddedRow">
+                VA_DBContext.cs
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                This class extends the DBContext class of the Entity framework, and allows the “Code First Approach” to creating the database and associated tables.
+                  A DBContext instance can be used to query from a database and group together changes that will then be written back to the store as a unit.
+                 It has a single override method that returns a strongly typed (Person) DBSet object, which in respect to this application is a list of People.
+            </td>
+        </tr>
+        <tr>
+            <td class="docHeading3 paddedRow">
+                Person.cs
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                This class is the base of the Model for this application.
+                    It consists of five properties:  ID, fName, lName, address, and email, which represent an individual person’s demographic information.
+                  These five fields correspond directly to the fields in the database table outlined above.
+                  This class references the System.ComponentModel.DataAnnotations namespace which provides a list of attributes than can be placed on top
+                 of a property that needs to be validated.  In the Person class, fName, lName, address, and email are all required fields so the [Required]
+                 attribute is used.  Additionally, the [EmailAddress] attribute is used on the email property to validate the user entered information for
+                 this field is a valid email address.
+            </td>
+        </tr>
+
+
+        <tr class="">
+            <td class="paddedRow2 docHeading2">
+                Views:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                This application is comprised of 10 distinct views that utilize a common layout file, _Layout.cshtml.  
+                The _Layout.cshtml file represents the layout of each page in the application. 
+                It is located in the Shared folder inside the Views folder and defines the common header, navigation and footer elements for each distinct view.
+                  The 10 views are sub divided into two categories, Home and People.
+                  These two groups of views are located in the Home and People folders inside the Views folder, and are directly related to the individual controllers
+                 for the application, which are described in detail in the “Controllers” section below.
+            </td>
+        </tr>
+
+        <tr>
+            <td class="docHeading3 paddedRow">
+                /Views/Home/
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                About.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view contains general information about the site.
+            </td>  
+        </tr>
+        <tr>
+            <td class="indentRow">
+                Contact.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view contains the contact information for a really great programmer!
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                Index.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This is the base home/start view for the site.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                TechnicalDocumentation.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view contains technical information about the web application.  It should only be read by geeks and overly ambitious “normal” folk. 
+                 It should not be read in the morning before at least one cup of coffee, or immediately after lunch due to coma inducing symptoms.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                UserDocumentation.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view displays end-user documentation for the site.
+            </td>
+        </tr>
+
+        <tr>
+            <td class="docHeading3 paddedRow">
+                /Views/People/
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                _createForm.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This is a partial view which contains the input form for entering demographic information and is used to reduce duplicate code.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                Create.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view contains the partial view _createForm, and is used for creating a new record of demographic information.  
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                Delete.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view is used to display the details of a specific record of demographic information.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                Details.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view is used to display the details of a specific record of demographic information.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                Edit.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This view is used to edit the fields of a specific record of demographic information that was previously entered.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                Index.cshtml:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow2">
+                This is the base view of this group of views.  It contains a table list of previously entered records, 
+                and provides functionality for managing each individual record.
+            </td>
+        </tr>
+
+        <tr class="">
+            <td class="paddedRow2 docHeading2">
+                Controllers:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                This project utilizes two controllers to handle the majority of the functionality.  They are located in the Controllers folder.
+                  All controllers extend the Controller class, which provides methods that respond to HTTP requests.
+            </td>
+        </tr>
+        <tr>
+            <td><ol><li>HomeController</li><li>PeopleController</li></ol></td>
+        </tr>
+        <tr>
+            <td class="docHeading3 paddedRow">
+                HomeController.cs:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                The HomeController is responsible for the majority of navigation throughout the application, 
+                and contains five public methods responsible for returning the five associated Views: Index, About, Contact, TechnicalDocumentation, and UserDocumentation.
+                  Each view is described in detail in the Views section above.  
+                It also creates a private instance of the VA_DBContext class used for database interaction and coupling.
+            </td>
+        </tr>
+        <tr>
+            <td class="docHeading3 paddedRow">
+                PeopleController.cs:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow">
+                The PeopleController contains a number of public methods responsible for returning the appropriate view for managing the demographic information records,
+                 as well as handling the HTTP requests for managing the information.  
+                It also creates a private instance of the VA_DBContext class used for database interaction and coupling.  
+                The associated views are:  Create, Delete, Details, Edit, and Index, as well as partial view _createForm.  
+            </td>
+        </tr>
+        <tr>
+            <td class="docHeading4 paddedRow">
+                Methods:
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Index()</span> – Returns the Index view which includes a list of People.  
+                The list of People contains one or multiple individual records of demographic information.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Details()</span> – Accepts an integer as an input parameter that represents the ID of a specific record.
+                  Returns the Details view of the individual record of demographic information that matches the input ID.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">getCreate()</span> – Returns the partial view _createForm.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Create()</span> – (HTTP GET) Returns the Create view which contains a input form used to enter 
+                a person’s demographic information. 
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Create()</span> – (HTTP POST) Accepts the input parameters passed by the request which represent the 
+                values entered into the form displayed in the INPUT view.  If the request is formatted correctly, the incoming parameters are bound 
+                to a Person object, a new record is inserted into the database, and the updated Index view with the newly created record is returned.  
+                If the input parameters of the request are not formatted correctly, the Create view is returned prepopulated with the input parameters 
+                passed via POST request.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Edit()</span> – (HTTP GET) Accepts an integer as an input parameter that represents the ID of a specific record.
+                  Returns the EDIT view of the individual record of demographic information that matches the input ID.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Edit()</span> – (HTTP POST) Accepts the input parameters passed by the request which represent the values entered 
+                into the form displayed in the EDIT view.  If the request is formatted correctly, the incoming parameters are bound to a Person object, 
+                the record is updated in the database, and the updated Index view with the newly created record is returned.  
+                If the input parameters of the request are not formatted correctly, the Edit view is returned prepopulated with the input parameters passed 
+                via POST request.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Delete()</span> – (HTTP GET) Accepts an integer as an input parameter that represents the ID of a specific record.  
+                Returns the Delete view of the individual record of demographic information that matches the input ID.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">DeleteConfirmed()</span> – (HTTP POST) Accepts an integer as an input parameter that represents the ID of a specific record.  
+                This method is called when the user accepts to delete the record that is presented in the Delete view.  
+                It finds the specific record in the database and permanately removed the record.  Returns the updated Index view.
+            </td>
+        </tr>
+        <tr>
+            <td class="indentRow paddedRow3">
+                <span class="docHeading5">Dispose()</span> – (Override)  Overrides the DBContext.Dispose() method, 
+                which is used to release both managed and unmanaged resources used by the private instance of VA_DBContext.
+            </td>
+        </tr>
+    </table>
+</div>
